@@ -32,4 +32,5 @@ func main() {
 	fmt.Println("###")
 	fmt.Println(inc()) //3
 	fmt.Println(inc()) //4
+	fmt.Println(inc()) //5
 }

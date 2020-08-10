@@ -2,11 +2,18 @@ package main
 
 import (
 	"fmt"
+	"regexp"
 	"strings"
 )
 
+func replaceSpecialCharacters(sentence string) string {
+	reg, _ := regexp.Compile("[^a-zA-Z0-9 ]+")
+
+	return reg.ReplaceAllString(sentence, "")
+}
+
 func wordCount(sentence string) map[string]int {
-	sentence = strings.ReplaceAll(strings.ReplaceAll(sentence, ",", ""), ".", "")
+	sentence = replaceSpecialCharacters(sentence)
 
 	splitedSentence := strings.Split(sentence, " ")
 

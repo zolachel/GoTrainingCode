@@ -9,7 +9,7 @@ import (
 	"github.com/gorilla/mux"
 )
 
-//PairDeviceHandler ...
+//PairDeviceHandler
 func PairDeviceHandler(w http.ResponseWriter, r *http.Request) {
 	w.Write([]byte(`{"status":"active"}`))
 }
